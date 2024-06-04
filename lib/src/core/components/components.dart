@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../helpers/app_helper/app_spacing.dart';
 
 import '../widgets/widgets.dart';
 import '../../themes/app_colors.dart';
-import '../../utils/sizer_custom/sizer.dart';
 
 class Components {
   static void showLoading([String? message]) {
@@ -37,8 +37,8 @@ class Components {
     return InkWell(
       onTap: ontap,
       child: Container(
-        padding: EdgeInsets.all(Dimensions.size10),
-        height: Dimensions.size45,
+        padding: EdgeInsets.all(10.h),
+        height: 45.h,
         child: Row(
           children: [
             CircleAvatar(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../helpers/app_helper/app_spacing.dart';
 
 import '../../themes/app_colors.dart';
-import '../../utils/sizer_custom/sizer.dart';
 import '../routes/app_pages.dart';
 import '../widgets/widgets.dart';
 
@@ -31,14 +31,14 @@ class _DialogConfirmState extends State<DialogConfirm> {
       width: 300.sp,
       height: widget.height ?? 130.sp,
       padding: EdgeInsets.only(
-        top: Dimensions.size16,
-        bottom: Dimensions.size10,
+        top: 16.sp,
+        bottom: 10.sp,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: Dimensions.size15),
+            padding: EdgeInsets.symmetric(horizontal: 15.sp),
             child: AppText(
               widget.title,
             ),
@@ -46,7 +46,7 @@ class _DialogConfirmState extends State<DialogConfirm> {
           verticalSpace(6),
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: Dimensions.size15,
+              horizontal: 15.sp,
               vertical: 7.5.sp,
             ),
             child: Text(
@@ -72,7 +72,7 @@ class _DialogConfirmState extends State<DialogConfirm> {
                   color: Colors.transparent,
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(
-                    vertical: Dimensions.size5,
+                    vertical: 5.sp,
                   ),
                   child: const AppText(
                     'Refuse',

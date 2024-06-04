@@ -1,11 +1,10 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../../utils/sizer_custom/sizer.dart';
 
 import '../dialogs/dialog_confirm.dart';
 import '../dialogs/dialog_loading.dart';
-import '../routes/app_pages.dart';
 
 Future<String?> getFirebaseMessagingToken() async {
   final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
@@ -70,7 +69,7 @@ handleReceiveNotification() async {
 
 handleTouchOnNotification(RemoteMessage? message) {
   if (message != null) {
-    AppNavigator.push(AppRoutes.notification);
+    // AppNavigator.push(AppRoutes.notification);
     // AppBloc.doExamBloc.add(JoinQuizEvent(roomId: message.data['idRoom'].toString()));
   }
 }

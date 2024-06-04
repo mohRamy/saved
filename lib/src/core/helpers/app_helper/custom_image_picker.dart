@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
@@ -8,7 +9,6 @@ import '../../widgets/widgets.dart';
 import 'app_spacing.dart';
 
 import '../../routes/app_pages.dart';
-import '../../../utils/sizer_custom/sizer.dart';
 
 class CustomImagePicker {
   final _picker = ImagePicker();

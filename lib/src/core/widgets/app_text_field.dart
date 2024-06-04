@@ -7,13 +7,13 @@ class AppTextField extends StatelessWidget {
   final int maxLines;
   final bool isObscure;
   const AppTextField({
-    Key? key,
+    super.key,
     required this.textController,
     required this.hintText,
     this.keyboardType = TextInputType.name,
     this.maxLines = 1,
     this.isObscure = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
   final double radius;
   final IconData? icon;
   const CustomButton({
-    Key? key,
+    super.key,
     this.onPressed,
     required this.buttomText,
     this.transparent = false,
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
     this.fontSize,
     this.radius = 5,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class CustomButton extends StatelessWidget {
     );
     return Center(
       child: SizedBox(
-        width: width ?? Dimensions.screenWidth,
-        height: height ?? Dimensions.size45 + 5,
+        width: width ?? Get.width,
+        height: height ?? 50.sp,
         child: TextButton(
           onPressed: onPressed,
           style: flatButton,
@@ -49,7 +49,7 @@ class CustomButton extends StatelessWidget {
             children: [
               icon != null
                   ? Padding(
-                      padding: EdgeInsets.only(right: Dimensions.size10 / 2),
+                      padding: EdgeInsets.only(right: 5.sp),
                       child: Icon(
                         icon,
                         color: transparent
@@ -61,7 +61,7 @@ class CustomButton extends StatelessWidget {
               Text(
                 buttomText,
                 style: TextStyle(
-                  fontSize: fontSize ?? Dimensions.size16,
+                  fontSize: fontSize ?? 16.sp,
                   color: transparent
                       ? Theme.of(context).primaryColor
                       : Theme.of(context).cardColor,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../themes/app_colors.dart';
-import '../../utils/sizer_custom/sizer.dart';
 import '../helpers/app_helper/app_spacing.dart';
 
 class DialogNotice extends StatelessWidget {

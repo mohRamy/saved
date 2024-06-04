@@ -1,7 +1,7 @@
 // import '../constants/app_keys.dart';
 // import 'shared_preferences_service.dart';
 
-// import '../../../features/screens/auth/data/models/auth_model.dart';
+// import '../../features/screens/auth/data/models/auth_model.dart';
 
 // class LocalService {
 //   final SharedPreferencesService sharedPreferencesService;
