@@ -45,7 +45,6 @@ class RegisterScreen extends GetView<RegisterController> {
                         prefixIcon: const Icon(Icons.email),
                       ),
                       verticalSpace(10),
-
                       //password
                       GetBuilder<RegisterController>(
                           builder: (registerController) {
