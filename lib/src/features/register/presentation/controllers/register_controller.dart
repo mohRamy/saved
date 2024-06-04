@@ -4,18 +4,19 @@ import 'package:get/get.dart';
 import '../../../../core/constants/app_enums.dart';
 
 
-class LoginController extends GetxController {
+class RegisterController extends GetxController {
   // Data
   
   // States
-  StateType getLoginState = StateType.init;
+  StateType getRegisterState = StateType.init;
 
   // Primitive
   String validationMessage = '';
 
   // Text Controller
-  late TextEditingController emailLC;
-  late TextEditingController passwordLC;
+  late TextEditingController nameRC;
+  late TextEditingController emailRC;
+  late TextEditingController passwordRC;
 
 
   bool isObscure = true;

@@ -6,6 +6,9 @@ class AppTextField extends StatelessWidget {
   final TextInputType keyboardType;
   final int maxLines;
   final bool isObscure;
+  final Widget prefixIcon;
+  final Widget suffixIcon;
+
   const AppTextField({
     super.key,
     required this.textController,
@@ -13,6 +16,8 @@ class AppTextField extends StatelessWidget {
     this.keyboardType = TextInputType.name,
     this.maxLines = 1,
     this.isObscure = false,
+    this.prefixIcon = const SizedBox(),
+    this.suffixIcon = const SizedBox(),
   });
 
   @override
@@ -36,8 +41,10 @@ class AppTextField extends StatelessWidget {
           enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide.none,
           ),
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
         ),
       ),
-      );
+    );
   }
 }
