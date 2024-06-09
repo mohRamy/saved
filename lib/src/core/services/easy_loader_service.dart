@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/src/core/constants/app_colors.dart';
 import '../constants/app_api_error.dart';
-
-import '../../themes/app_colors.dart';
 
 class EasyLoaderService extends GetxService {
   @override
@@ -83,7 +82,7 @@ class EasyLoaderService extends GetxService {
     EasyLoading.instance
       ..userInteractions = true
       ..displayDuration = const Duration(seconds: 3)
-      ..successWidget = Icon(
+      ..successWidget = const Icon(
         Icons.check,
         color: success,
         size: 45,

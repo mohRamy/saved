@@ -1,117 +1,54 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+part of 'widgets.dart';
 
-import '../../themes/app_colors.dart';
-
-class PrimaryTextField extends StatefulWidget {
-  final String labelText;
+class PrimaryTextField extends StatelessWidget {
+  final TextEditingController textController;
+  final Function()? ontap;
   final String? hintText;
-  final bool isObscureText;
-  final bool isTextArea;
-  final bool isEnabled;
-  final bool autofocus;
-  final Widget? suffixIcon;
-  final TextInputType inputType;
-  final TextEditingController controller;
-  final TextInputAction textInputAction;
-  final FormFieldValidator? validator;
-  final void Function()? onTap;
+  final bool readOnly;
+  final TextInputType keyboardType;
+  final int maxLines;
+  final bool isObscure;
+  final Widget prefixIcon;
+  final Widget suffixIcon;
 
   const PrimaryTextField({
     super.key,
-    required this.labelText,
-    this.isObscureText = false,
-    this.isTextArea = false,
-    this.isEnabled = true,
-    this.inputType = TextInputType.text,
-    required this.controller,
-    this.onTap,
-    this.validator,
-    this.suffixIcon,
-    this.textInputAction = TextInputAction.next,
-    this.autofocus = false,
+    required this.textController,
+    this.ontap,
     this.hintText,
+    this.readOnly = false,
+    this.keyboardType = TextInputType.name,
+    this.maxLines = 1,
+    this.isObscure = false,
+    this.prefixIcon = const SizedBox(),
+    this.suffixIcon = const SizedBox(),
   });
 
   @override
-  State<PrimaryTextField> createState() => _PrimaryTextFieldState();
-}
-
-class _PrimaryTextFieldState extends State<PrimaryTextField> {
-  bool isVisibleText = false;
-
-  @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            widget.labelText,
-            style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                  color: fCL,
-                  fontSize: 14,
-                ),
-          ),
-          SizedBox(height: 8.h),
-          TextFormField(
-            validator: widget.validator,
-            autovalidateMode: AutovalidateMode.onUserInteraction,
-            controller: widget.controller,
-            onTap: widget.onTap,
-            textInputAction: widget.textInputAction,
-            autofocus: widget.autofocus,
-            onChanged: (value) {
-              setState(() {});
-            },
-            onTapOutside: (event) {
-              FocusManager.instance.primaryFocus?.unfocus();
-            },
-            decoration: InputDecoration(
-                hintText: widget.hintText,
-                hintStyle: TextStyle(color: fCL.withOpacity(0.5)),
-                errorMaxLines: 3,
-                filled: true,
-                fillColor: primaryColor,
-                suffixIcon: widget.suffixIcon ??
-                    (widget.isObscureText
-                        ? IconButton(
-                            onPressed: () {
-                              setState(() {
-                                isVisibleText = !isVisibleText;
-                              });
-                            },
-                            icon: isVisibleText
-                                ? const Icon(Icons.visibility_off_outlined)
-                                : const Icon(Icons.visibility_outlined),
-                          )
-                        : null),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.sp),
-                  borderSide: BorderSide.none,
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.sp),
-                  borderSide: BorderSide.none,
-                ),
-                errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.sp),
-                  borderSide: BorderSide.none,
-                ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.sp),
-                  borderSide: BorderSide.none,
-                ),
-                contentPadding: EdgeInsets.all(8.w)),
-            keyboardType: widget.inputType,
-            obscureText: widget.isObscureText && !isVisibleText,
-            maxLines: widget.isTextArea ? 4 : 1,
-            minLines: widget.isTextArea ? 3 : 1,
-            readOnly: widget.onTap != null,
-            enabled: widget.isEnabled,
-          ),
-        ],
+    return TextField(
+      maxLines: maxLines,
+      minLines: 1,
+      onTap: ontap,
+      readOnly: readOnly,
+      keyboardType: keyboardType,
+      controller: textController,
+      obscureText: isObscure,
+      cursorColor: primaryColor,
+      style: Theme.of(context).textTheme.titleMedium,
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: Theme.of(context).textTheme.bodySmall,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.r),
+          borderSide: const BorderSide(color: backgroundColor),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12.r),
+          borderSide: const BorderSide(color: backgroundColor),
+        ),
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
       ),
     );
   }

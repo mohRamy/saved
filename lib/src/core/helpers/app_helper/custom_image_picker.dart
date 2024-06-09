@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../widgets/widgets.dart';
-import 'app_spacing.dart';
+import 'spacing.dart';
 
 import '../../routes/app_pages.dart';
 
@@ -44,7 +44,7 @@ class CustomImagePicker {
           children: [
             Icon(icon, size: 21.25.sp),
             horizontalSpace(15),
-            AppText(text),
+            PrimaryText(text),
           ],
         ),
       ),
@@ -83,15 +83,11 @@ class CustomImagePicker {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 25.sp,
-            ),
-            AppText(
+            verticalSpace(25),
+            PrimaryText(
               text,
             ),
-            SizedBox(
-              height: 10.sp,
-            ),
+            verticalSpace(10),
             _buildImageModalButton(
               context: context,
               index: 0,

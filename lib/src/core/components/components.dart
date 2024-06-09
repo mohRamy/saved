@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import '../helpers/app_helper/app_spacing.dart';
+import '../constants/app_colors.dart';
+import '../helpers/app_helper/spacing.dart';
 
 import '../widgets/widgets.dart';
-import '../../themes/app_colors.dart';
 
 class Components {
   static void showLoading([String? message]) {
@@ -47,7 +47,7 @@ class Components {
               child: icon,
             ),
             horizontalSpace(10),
-            AppText(label),
+            PrimaryText(label),
           ],
         ),
       ),
@@ -63,10 +63,10 @@ class Components {
     Get.snackbar(
       title,
       message,
-      titleText: AppText(
+      titleText: PrimaryText(
         title,
       ),
-      messageText: AppText(
+      messageText: PrimaryText(
         message,
       ),
       colorText: mCL,

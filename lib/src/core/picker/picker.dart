@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../components/components.dart';
@@ -58,4 +59,22 @@ Future<File?> pickVideoFromCamera() async {
     Components.showSnackBar(e.toString());
   }
   return video;
+}
+
+Future<List<File>> pickImagesFromGallery() async {
+  List<File> images = [];
+  try {
+    var files = await FilePicker.platform.pickFiles(
+      type: FileType.image,
+      allowMultiple: true,
+    );
+    if (files != null && files.files.isNotEmpty) {
+      for (int i = 0; i < files.files.length; i++) {
+        images.add(File(files.files[i].path!));
+      }
+    }
+  } catch (e) {
+    Components.showSnackBar(e.toString());
+  }
+  return images;
 }

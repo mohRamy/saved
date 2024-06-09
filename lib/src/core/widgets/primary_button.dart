@@ -1,18 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portfolio/src/themes/font_family.dart';
-import '../../themes/app_colors.dart';
+part of 'widgets.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String txt;
   final Function() onTap;
-  final Color backgroundColor;
   final double borderRadius;
   const PrimaryButton({
     super.key,
     required this.txt,
     required this.onTap,
-    this.backgroundColor = const Color(0xFF89DAD0),
     this.borderRadius = 40,
   });
 
@@ -21,18 +16,19 @@ class PrimaryButton extends StatelessWidget {
     return TextButton(
       onPressed: onTap,
       style: TextButton.styleFrom(
-        backgroundColor: backgroundColor,
+        backgroundColor: primaryColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
             borderRadius,
           ),
         ),
         padding: EdgeInsets.all(10.sp),
+        minimumSize: Size(1.sw, 48.h),
       ),
       child: Text(
         txt,
         style: TextStyle(
-          fontSize: 18.sp,
+          fontSize: 16.sp,
           color: mCL,
           fontFamily: FontFamily.lato,
         ),

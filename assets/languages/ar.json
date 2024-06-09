@@ -1,0 +1,68 @@
+{
+    "offline": "لا يمكن الاتصال بالإنترنت.\n يرجى التحقق من اتصالك بالشبكة وإعادة المحاولة لاحق",
+    "unexpectedException": "خطأ غير متوقع. يرجى إعادة المحاولة لاحق",
+    "internalServerError": "عذراً، حدث خطأ في الخادم، لا يمكن تنفيذ الطلب الآن",
+    "notFound": "عذراً، لا يمكن العثور على المورد المطلوب",
+    "forbidden": "عذراً، يجب عليك تسجيل الدخول للوصول إلى هذا المورد",
+    "unauthorized": "عذراً، ليس لديك الصلاحيات الكافية للوصول إلى هذا المورد",
+    "badRequest": "عذراً، لا يمكن تنفيذ الطلب لأنه غير صالح",
+    "success": "تم الأمر بنجاح",
+    "failure": "فشلت العملية",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "waiting": "قيد المعالجة",
+    "close": "إغلاق",
+
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "hello": "مرحبا",
+    "Welcom_you_back": "أهلا بك سعيدون بعودتك",
+    "name": "الإسم",
+    "user_name": "اسم المستخدم",
+    "email": "الحساب",
+    "password": "كلمة السر",
+    "don't_an_account": " لا تملك حساب ؟",
+    "have_an_account_already": "هل تمتلك حساب بالفعل ؟",
+
+    "saver": "الحافظة",
+    "home": "الصفحة الرئيسية",
+    "profile": "الحساب",
+
+    "settings": "الإعدادات",
+    "personal_info": "المعلومات الشخصية",
+    "language": "اللغة",
+    "theme": "الوضع",
+    "share_app": "مشاركة التطبيق",
+    "logout": "تسجيل الخروج",
+    "are_you_sure_to_logout": "هل أنت متأكد من تسجيل الدخول ؟",
+    "signup_using_on_of_the_folloging_methods": "سجل الدخول من طرق أخرى",
+
+    "add_saved": "إضافة محفوظة",
+    "select_saved_images": "إختر صور المحفوظة",
+
+    "details": "التفاصيل",
+    "description": "الملاحظة",
+    "hereMyDesc": "هنا ملاحظتي",
+    "save_date": "تاريخ الحفظ",
+    "reminder_date": "تاريخ التذكير",
+    "enter_reminder_date": "أدخل تاريخ التذكير",
+
+    "change_password": "تغيير كلمة السر",
+    "enter_your_old_password": "أدخل كلمة السر القديمة",
+    "enter_your_new_password": "أدخل كلمة السر الجديدة",
+    "confirm_your_new_password": "أكد كلمة السر الجديدة",
+    "submit": "تأكيد",
+
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "egypt": "مصر",
+
+    "light_mode": "الوضع النهاري",
+    "dark_mode": "الوضع الليلي",
+
+    "refuse": "رفض",
+    "agree": "موافقة",
+
+    "choose_image_from_your_source": "اختر صورة من مصدرك",
+    "choose_image": "إختيار صورة"
+}

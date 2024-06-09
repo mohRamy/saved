@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../themes/app_colors.dart';
-import '../helpers/app_helper/app_spacing.dart';
+import '../constants/app_colors.dart';
+import '../helpers/app_helper/spacing.dart';
+import '../routes/app_pages.dart';
 
 class DialogNotice extends StatelessWidget {
   final String title;
@@ -39,9 +40,7 @@ class DialogNotice extends StatelessWidget {
           verticalSpace(8),
           const Divider(),
           GestureDetector(
-            onTap: () {
-              // AppNavigator.pop();
-            },
+            onTap: () => AppNavigator.pop(),
             child: Container(
               color: Colors.transparent,
               width: 300.sp,

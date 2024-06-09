@@ -1,3 +1,5 @@
+import 'package:portfolio/src/core/constants/app_assets.dart';
+
 import '../../models/language_model.dart';
 
 class AppKeys {
@@ -10,13 +12,13 @@ class AppKeys {
   static const String languageCode = 'language_code';
   static List<LanguageModel> languages = [
     LanguageModel(
-      imageUrl: "en.png",
+      imageUrl: AppAssets.english,
       languageName: 'English',
       languageCode: 'en',
       countryCode: 'US',
     ),
     LanguageModel(
-      imageUrl: "ar.png",
+      imageUrl: AppAssets.arabic,
       languageName: 'عربي',
       languageCode: 'ar',
       countryCode: 'SA',

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../helpers/app_helper/app_spacing.dart';
+import 'package:get/get.dart';
+import 'package:portfolio/src/core/constants/app_translation_keys.dart';
+import '../constants/app_colors.dart';
+import '../helpers/app_helper/spacing.dart';
 
-import '../../themes/app_colors.dart';
 import '../routes/app_pages.dart';
 import '../widgets/widgets.dart';
 
@@ -39,11 +41,9 @@ class _DialogConfirmState extends State<DialogConfirm> {
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.sp),
-            child: AppText(
-              widget.title,
-            ),
+            child: PrimaryText(widget.title),
           ),
-          verticalSpace(6),
+          // verticalSpace(6),
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 15.sp,
@@ -59,7 +59,7 @@ class _DialogConfirmState extends State<DialogConfirm> {
               ),
             ),
           ),
-          verticalSpace(4),
+          // verticalSpace(4),
           const Divider(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -74,10 +74,7 @@ class _DialogConfirmState extends State<DialogConfirm> {
                   padding: EdgeInsets.symmetric(
                     vertical: 5.sp,
                   ),
-                  child: const AppText(
-                    'Refuse',
-                    type: TextType.titleSmall,
-                  ),
+                  child: PrimaryText(AppTranslationKeys.refuse.tr),
                 ),
               ),
               GestureDetector(
@@ -91,7 +88,7 @@ class _DialogConfirmState extends State<DialogConfirm> {
                   alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(vertical: 5.sp),
                   child: Text(
-                    'Agree',
+                    AppTranslationKeys.agree.tr,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 12.sp,
